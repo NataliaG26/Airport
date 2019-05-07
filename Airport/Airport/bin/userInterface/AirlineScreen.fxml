@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pagination fx:id="pagination" layoutY="162.0" prefHeight="342.0" prefWidth="700.0" />
+      <ImageView fitHeight="122.0" fitWidth="231.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icono.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="483.0" layoutY="9.0" mnemonicParsing="false" onAction="#generateList" text="Generar Lista" />
+      <TextField fx:id="list" layoutX="476.0" layoutY="46.0" prefHeight="25.0" prefWidth="114.0" promptText="Tamaño de la lista" />
+      <MenuButton layoutX="132.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Organizar">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#dataAndTime" text="Fecha y hora" />
+            <MenuItem mnemonicParsing="false" onAction="#destinationAZ" text="Ciudad de destino (A-Z)" />
+            <MenuItem mnemonicParsing="false" onAction="#code" text="Numero de vuelo" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="search" layoutX="321.0" layoutY="46.0" prefHeight="25.0" prefWidth="114.0" promptText="Info vuelo" />
+      <Label fx:id="time" layoutX="193.0" layoutY="83.0" text="Label" />
+      <Label fx:id="wait" layoutX="364.0" layoutY="92.0" text="Label" />
+      <MenuButton layoutX="315.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Busqueda">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#searchCode" text="Codigo" />
+          <MenuItem mnemonicParsing="false" onAction="#searchDestination" text="Ciudad Destino" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
